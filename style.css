@@ -1,0 +1,98 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+html{
+    background: url(img.jpg)top center;
+    background-size: cover;
+    
+    
+}
+.section{
+    height: 100vh;
+    width: 100%;
+}
+.intro{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: opacity 0.5s ease;
+    background: rgba(0,0,0,0.4);
+    border-top: 0.1px solid #f2f2f2;
+}
+.drumkit{
+    color: #f2f2f2;
+    font-size: 100px;
+}
+.intro p{
+    position: relative;
+    font-size: 16px;
+    bottom: 5vh;
+    font-weight: 800;
+    
+}
+.btn{
+    position: relative;
+    width: 150px;
+    height: 50px;
+    bottom: 20px;
+    background: none;
+    border: none;
+    color:white;
+    font-size: 20px;
+    background: greenyellow;
+    border-radius: 3px;
+}
+.keys{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease;
+    
+}
+.key{
+    border: 4px solid rgba(0,0,0,0.6);
+    margin: 10px;
+    width: 100px;
+    text-align:  center;
+    padding: 10px 5px;
+    transition: all 0.1s ease;   /* due to this function e.propertyName = transform is working in js file */
+    background: rgba(0,0,0,0.4);
+    color: #f2f2f2;
+}
+kbd{
+    font-size: 40px;
+    display: block;
+}
+.sound{
+    font-size: 8px;
+    text-transform: uppercase;
+    color: greenyellow;
+    letter-spacing: 1px;
+    font-weight: 1000;
+}
+/* for audio animation */
+.playing{
+    border: 4px solid  greenyellow;
+    transform: scale(1.2);
+}
+
+/* for introscreen to fadeout mainkit to fadein */
+div.fadeout{
+    opacity: 0;
+    pointer-events: none;
+}
+div.fadein{
+    opacity: 1;
+    pointer-events: all;
+}
